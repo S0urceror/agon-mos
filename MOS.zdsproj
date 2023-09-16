@@ -37,7 +37,7 @@
 <tools>
 <tool name="Assembler">
 <options>
-<option name="define" type="string" change-action="assemble">_EZ80ACCLAIM!=1</option>
+<option name="define" type="string" change-action="assemble">_EZ80ACCLAIM!=1,_SIMULATE=1</option>
 <option name="include" type="string" change-action="assemble"></option>
 <option name="list" type="boolean" change-action="none">true</option>
 <option name="listmac" type="boolean" change-action="none">false</option>
@@ -51,7 +51,7 @@
 <tool name="Compiler">
 <options>
 <option name="padbranch" type="string" change-action="compile">Off</option>
-<option name="define" type="string" change-action="compile">_DEBUG,_EZ80,_EZ80F92,_EZ80ACCLAIM!</option>
+<option name="define" type="string" change-action="compile">_DEBUG,_EZ80,_EZ80F92,_EZ80ACCLAIM!,_SIMULATE</option>
 <option name="genprintf" type="boolean" change-action="compile">true</option>
 <option name="keepasm" type="boolean" change-action="none">false</option>
 <option name="keeplst" type="boolean" change-action="none">true</option>
@@ -70,7 +70,7 @@
 <tool name="Debugger">
 <options>
 <option name="target" type="string" change-action="rebuild">eZ80F92_AGON_Flash</option>
-<option name="debugtool" type="string" change-action="none">USBSmartCable</option>
+<option name="debugtool" type="string" change-action="none">Simulator</option>
 <option name="usepageerase" type="boolean" change-action="none">true</option>
 </options>
 </tool>
@@ -281,6 +281,20 @@
 
 <!-- breakpoint information -->
 <breakpoints>
+<breakpoint temporary="false" enabled="true" >
+<line-number>119</line-number>
+<pathname>Z:\Development\AgonLight\software\mos\main.c</pathname>
+<address>3405</address>
+<command></command>
+<preserve-type>0</preserve-type>
+</breakpoint>
+<breakpoint temporary="false" enabled="true" >
+<line-number>210</line-number>
+<pathname>Z:\Development\AgonLight\software\mos\src\serial.asm</pathname>
+<address>0</address>
+<command></command>
+<preserve-type>0</preserve-type>
+</breakpoint>
 </breakpoints>
 
 </project>

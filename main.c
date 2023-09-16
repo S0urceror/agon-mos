@@ -118,7 +118,7 @@ int main(void) {
 	if(coldBoot == 0) {								// If a warm boot detected then
 		putch(12);									// Clear the screen
 	}
-	printf("Agon Quark MOS Version %d.%02d", MOS_version, MOS_revision);
+	printf("Agon Quark MOS Version %d.%02d.FD", MOS_version, MOS_revision);
 	#if MOS_rc > 0
 		printf(" RC%d", MOS_rc);
 	#endif
